@@ -22,6 +22,7 @@ const SendMessage = ({ scroll }) => {
     setMessage("");
     scroll.current.scrollIntoView({ behavior: "smooth" });
   };
+
   return (
     <form onSubmit={(event) => sendMessage(event)} className="send-message">
       <label htmlFor="messageInput" hidden>
@@ -33,7 +34,7 @@ const SendMessage = ({ scroll }) => {
         type="text"
         className="form-input__input"
         placeholder="type message..."
-        value={message}
+        value = {message}
         onChange={(e) => setMessage(e.target.value)}
       />
       <button type="submit">Send</button>
